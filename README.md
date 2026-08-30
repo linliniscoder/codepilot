@@ -17,7 +17,7 @@ CodePilot 是一个仓库级 coding agent，用于将自然语言任务转成可
 | `tools/file_tool.py` | workspace 边界、先读后改、精确替换，避免越界写入。 |
 | `evaluation/benchmark.py` | 隔离 benchmark、hidden tests 和结果统计。 |
 
-
+这三个文件可以直接反映项目是否只停留在 demo，还是已经具备边界控制和恢复能力。
 
 ## 问题定义
 
@@ -195,7 +195,29 @@ python -m evaluation.benchmark
 
 benchmark 结果会保存到 `evaluation/results.json`。
 
+深度评测脚本支持 40 个任务、基线和消融对比：
 
+```bash
+python -m evaluation.build_benchmark_40
+python -m evaluation.experiments
+```
+
+默认会输出 `full`、`no_debug_reflection`、`no_recovery`、`one_shot` 四组结果，并生成分组统计。
+
+## 面试关注点
+
+- 完整闭环，而不是单点功能。
+- 真实测试结果，而不是只看模型输出。
+- 失败后的恢复能力，而不是一次失败就结束。
+- 明确的安全边界，而不是任意文件写入。
+- 可量化的评测方式，而不是只靠主观描述。
+
+## 已知限制
+
+- 当前 benchmark 规模较小，统计意义有限。
+- 工具执行受 workspace 保护，但没有容器化。
+- parser 和 retrieval 主要面向 Python。
+- 模型效果和显存占用会受硬件环境影响。
 
 ## 发布说明
 
@@ -203,4 +225,4 @@ benchmark 结果会保存到 `evaluation/results.json`。
 
 ## License
 
-当前导出包未包含许可证文件。
+见 [LICENSE](LICENSE)。

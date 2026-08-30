@@ -1,0 +1,562 @@
+[
+  {
+    "id": "math-average-001",
+    "issue": "修复 calculator.py：add 应该执行加法。",
+    "repo": "evaluation/fixtures/math_average",
+    "public_test_command": "python -m pytest tests -q",
+    "hidden_test_command": "python -m pytest hidden_tests/case_01_add_positive.py -q",
+    "hidden_test_source": "evaluation/hidden_tests/math_average",
+    "expected_files": [
+      "calculator.py"
+    ],
+    "forbidden_files": [
+      "tests/test_calculator.py"
+    ]
+  },
+  {
+    "id": "math-average-002",
+    "issue": "修复 calculator.py：add 应该正确处理负数。",
+    "repo": "evaluation/fixtures/math_average",
+    "public_test_command": "python -m pytest tests -q",
+    "hidden_test_command": "python -m pytest hidden_tests/case_02_add_negative.py -q",
+    "hidden_test_source": "evaluation/hidden_tests/math_average",
+    "expected_files": [
+      "calculator.py"
+    ],
+    "forbidden_files": [
+      "tests/test_calculator.py"
+    ]
+  },
+  {
+    "id": "math-average-003",
+    "issue": "修复 calculator.py：average([]) 应该返回 0。",
+    "repo": "evaluation/fixtures/math_average",
+    "public_test_command": "python -m pytest tests -q",
+    "hidden_test_command": "python -m pytest hidden_tests/case_03_average_empty.py -q",
+    "hidden_test_source": "evaluation/hidden_tests/math_average",
+    "expected_files": [
+      "calculator.py"
+    ],
+    "forbidden_files": [
+      "tests/test_calculator.py"
+    ]
+  },
+  {
+    "id": "math-average-004",
+    "issue": "修复 calculator.py：average 需要正确处理整数列表。",
+    "repo": "evaluation/fixtures/math_average",
+    "public_test_command": "python -m pytest tests -q",
+    "hidden_test_command": "python -m pytest hidden_tests/case_04_average_integers.py -q",
+    "hidden_test_source": "evaluation/hidden_tests/math_average",
+    "expected_files": [
+      "calculator.py"
+    ],
+    "forbidden_files": [
+      "tests/test_calculator.py"
+    ]
+  },
+  {
+    "id": "math-average-005",
+    "issue": "修复 calculator.py：average 需要正确处理浮点列表。",
+    "repo": "evaluation/fixtures/math_average",
+    "public_test_command": "python -m pytest tests -q",
+    "hidden_test_command": "python -m pytest hidden_tests/case_05_average_floats.py -q",
+    "hidden_test_source": "evaluation/hidden_tests/math_average",
+    "expected_files": [
+      "calculator.py"
+    ],
+    "forbidden_files": [
+      "tests/test_calculator.py"
+    ]
+  },
+  {
+    "id": "math-average-006",
+    "issue": "修复 calculator.py：average 需要正确处理单元素列表。",
+    "repo": "evaluation/fixtures/math_average",
+    "public_test_command": "python -m pytest tests -q",
+    "hidden_test_command": "python -m pytest hidden_tests/case_06_average_singleton.py -q",
+    "hidden_test_source": "evaluation/hidden_tests/math_average",
+    "expected_files": [
+      "calculator.py"
+    ],
+    "forbidden_files": [
+      "tests/test_calculator.py"
+    ]
+  },
+  {
+    "id": "math-average-007",
+    "issue": "修复 calculator.py：average 需要正确处理正负混合数据。",
+    "repo": "evaluation/fixtures/math_average",
+    "public_test_command": "python -m pytest tests -q",
+    "hidden_test_command": "python -m pytest hidden_tests/case_07_average_mixed.py -q",
+    "hidden_test_source": "evaluation/hidden_tests/math_average",
+    "expected_files": [
+      "calculator.py"
+    ],
+    "forbidden_files": [
+      "tests/test_calculator.py"
+    ]
+  },
+  {
+    "id": "math-average-008",
+    "issue": "修复 calculator.py：add 和 average 都需要符合预期。",
+    "repo": "evaluation/fixtures/math_average",
+    "public_test_command": "python -m pytest tests -q",
+    "hidden_test_command": "python -m pytest hidden_tests/case_08_average_large.py -q",
+    "hidden_test_source": "evaluation/hidden_tests/math_average",
+    "expected_files": [
+      "calculator.py"
+    ],
+    "forbidden_files": [
+      "tests/test_calculator.py"
+    ]
+  },
+  {
+    "id": "text-slugify-001",
+    "issue": "修复 text_utils.py：slugify 需要处理基本英文句子。",
+    "repo": "evaluation/fixtures/text_slugify",
+    "public_test_command": "python -m pytest tests -q",
+    "hidden_test_command": "python -m pytest hidden_tests/case_01_sentence.py -q",
+    "hidden_test_source": "evaluation/hidden_tests/text_slugify",
+    "expected_files": [
+      "text_utils.py"
+    ],
+    "forbidden_files": [
+      "tests/test_text_utils.py"
+    ]
+  },
+  {
+    "id": "text-slugify-002",
+    "issue": "修复 text_utils.py：slugify 需要去除首尾短横线。",
+    "repo": "evaluation/fixtures/text_slugify",
+    "public_test_command": "python -m pytest tests -q",
+    "hidden_test_command": "python -m pytest hidden_tests/case_02_trim.py -q",
+    "hidden_test_source": "evaluation/hidden_tests/text_slugify",
+    "expected_files": [
+      "text_utils.py"
+    ],
+    "forbidden_files": [
+      "tests/test_text_utils.py"
+    ]
+  },
+  {
+    "id": "text-slugify-003",
+    "issue": "修复 text_utils.py：连续分隔符应折叠为一个短横线。",
+    "repo": "evaluation/fixtures/text_slugify",
+    "public_test_command": "python -m pytest tests -q",
+    "hidden_test_command": "python -m pytest hidden_tests/case_03_repeated_separators.py -q",
+    "hidden_test_source": "evaluation/hidden_tests/text_slugify",
+    "expected_files": [
+      "text_utils.py"
+    ],
+    "forbidden_files": [
+      "tests/test_text_utils.py"
+    ]
+  },
+  {
+    "id": "text-slugify-004",
+    "issue": "修复 text_utils.py：标点输入应该返回空字符串。",
+    "repo": "evaluation/fixtures/text_slugify",
+    "public_test_command": "python -m pytest tests -q",
+    "hidden_test_command": "python -m pytest hidden_tests/case_04_empty.py -q",
+    "hidden_test_source": "evaluation/hidden_tests/text_slugify",
+    "expected_files": [
+      "text_utils.py"
+    ],
+    "forbidden_files": [
+      "tests/test_text_utils.py"
+    ]
+  },
+  {
+    "id": "text-slugify-005",
+    "issue": "修复 text_utils.py：纯标点输入应该返回空字符串。",
+    "repo": "evaluation/fixtures/text_slugify",
+    "public_test_command": "python -m pytest tests -q",
+    "hidden_test_command": "python -m pytest hidden_tests/case_05_punctuation_only.py -q",
+    "hidden_test_source": "evaluation/hidden_tests/text_slugify",
+    "expected_files": [
+      "text_utils.py"
+    ],
+    "forbidden_files": [
+      "tests/test_text_utils.py"
+    ]
+  },
+  {
+    "id": "text-slugify-006",
+    "issue": "修复 text_utils.py：空格和标点混合时应正确生成 slug。",
+    "repo": "evaluation/fixtures/text_slugify",
+    "public_test_command": "python -m pytest tests -q",
+    "hidden_test_command": "python -m pytest hidden_tests/case_06_spaces_punctuation.py -q",
+    "hidden_test_source": "evaluation/hidden_tests/text_slugify",
+    "expected_files": [
+      "text_utils.py"
+    ],
+    "forbidden_files": [
+      "tests/test_text_utils.py"
+    ]
+  },
+  {
+    "id": "text-slugify-007",
+    "issue": "修复 text_utils.py：数字和字母混合时应保留数字。",
+    "repo": "evaluation/fixtures/text_slugify",
+    "public_test_command": "python -m pytest tests -q",
+    "hidden_test_command": "python -m pytest hidden_tests/case_07_numbers.py -q",
+    "hidden_test_source": "evaluation/hidden_tests/text_slugify",
+    "expected_files": [
+      "text_utils.py"
+    ],
+    "forbidden_files": [
+      "tests/test_text_utils.py"
+    ]
+  },
+  {
+    "id": "text-slugify-008",
+    "issue": "修复 text_utils.py：首尾空白和标点需要同时处理。",
+    "repo": "evaluation/fixtures/text_slugify",
+    "public_test_command": "python -m pytest tests -q",
+    "hidden_test_command": "python -m pytest hidden_tests/case_08_trim_and_punctuation.py -q",
+    "hidden_test_source": "evaluation/hidden_tests/text_slugify",
+    "expected_files": [
+      "text_utils.py"
+    ],
+    "forbidden_files": [
+      "tests/test_text_utils.py"
+    ]
+  },
+  {
+    "id": "order-total-001",
+    "issue": "修复 order.py：discount_percent 以百分数表示。",
+    "repo": "evaluation/fixtures/order_total",
+    "public_test_command": "python -m pytest tests -q",
+    "hidden_test_command": "python -m pytest hidden_tests/case_01_percentage.py -q",
+    "hidden_test_source": "evaluation/hidden_tests/order_total",
+    "expected_files": [
+      "order.py"
+    ],
+    "forbidden_files": [
+      "tests/test_order.py"
+    ]
+  },
+  {
+    "id": "order-total-002",
+    "issue": "修复 order.py：0% 折扣应该保持原价。",
+    "repo": "evaluation/fixtures/order_total",
+    "public_test_command": "python -m pytest tests -q",
+    "hidden_test_command": "python -m pytest hidden_tests/case_02_zero_discount.py -q",
+    "hidden_test_source": "evaluation/hidden_tests/order_total",
+    "expected_files": [
+      "order.py"
+    ],
+    "forbidden_files": [
+      "tests/test_order.py"
+    ]
+  },
+  {
+    "id": "order-total-003",
+    "issue": "修复 order.py：100% 折扣应该返回 0。",
+    "repo": "evaluation/fixtures/order_total",
+    "public_test_command": "python -m pytest tests -q",
+    "hidden_test_command": "python -m pytest hidden_tests/case_03_full_discount.py -q",
+    "hidden_test_source": "evaluation/hidden_tests/order_total",
+    "expected_files": [
+      "order.py"
+    ],
+    "forbidden_files": [
+      "tests/test_order.py"
+    ]
+  },
+  {
+    "id": "order-total-004",
+    "issue": "修复 order.py：需要正确处理小数金额。",
+    "repo": "evaluation/fixtures/order_total",
+    "public_test_command": "python -m pytest tests -q",
+    "hidden_test_command": "python -m pytest hidden_tests/case_04_fractional_total.py -q",
+    "hidden_test_source": "evaluation/hidden_tests/order_total",
+    "expected_files": [
+      "order.py"
+    ],
+    "forbidden_files": [
+      "tests/test_order.py"
+    ]
+  },
+  {
+    "id": "order-total-005",
+    "issue": "修复 order.py：需要正确处理 12.5% 折扣。",
+    "repo": "evaluation/fixtures/order_total",
+    "public_test_command": "python -m pytest tests -q",
+    "hidden_test_command": "python -m pytest hidden_tests/case_05_decimal_discount.py -q",
+    "hidden_test_source": "evaluation/hidden_tests/order_total",
+    "expected_files": [
+      "order.py"
+    ],
+    "forbidden_files": [
+      "tests/test_order.py"
+    ]
+  },
+  {
+    "id": "order-total-006",
+    "issue": "修复 order.py：19.99 和 15% 的结果需要精确。",
+    "repo": "evaluation/fixtures/order_total",
+    "public_test_command": "python -m pytest tests -q",
+    "hidden_test_command": "python -m pytest hidden_tests/case_06_precision.py -q",
+    "hidden_test_source": "evaluation/hidden_tests/order_total",
+    "expected_files": [
+      "order.py"
+    ],
+    "forbidden_files": [
+      "tests/test_order.py"
+    ]
+  },
+  {
+    "id": "order-total-007",
+    "issue": "修复 order.py：小额金额也要保持精度。",
+    "repo": "evaluation/fixtures/order_total",
+    "public_test_command": "python -m pytest tests -q",
+    "hidden_test_command": "python -m pytest hidden_tests/case_07_small_total.py -q",
+    "hidden_test_source": "evaluation/hidden_tests/order_total",
+    "expected_files": [
+      "order.py"
+    ],
+    "forbidden_files": [
+      "tests/test_order.py"
+    ]
+  },
+  {
+    "id": "order-total-008",
+    "issue": "修复 order.py：折扣值仍然按百分数计算。",
+    "repo": "evaluation/fixtures/order_total",
+    "public_test_command": "python -m pytest tests -q",
+    "hidden_test_command": "python -m pytest hidden_tests/case_08_decimal_discount_precision.py -q",
+    "hidden_test_source": "evaluation/hidden_tests/order_total",
+    "expected_files": [
+      "order.py"
+    ],
+    "forbidden_files": [
+      "tests/test_order.py"
+    ]
+  },
+  {
+    "id": "missing-module-001",
+    "issue": "修复 helpers.py：normalize_name 需要处理内层空白。",
+    "repo": "evaluation/fixtures/missing_module",
+    "public_test_command": "python -m pytest tests -q",
+    "hidden_test_command": "python -m pytest hidden_tests/case_01_trim.py -q",
+    "hidden_test_source": "evaluation/hidden_tests/missing_module",
+    "expected_files": [
+      "helpers.py"
+    ],
+    "forbidden_files": [
+      "tests/test_app.py"
+    ]
+  },
+  {
+    "id": "missing-module-002",
+    "issue": "修复 helpers.py：display_name 需要折叠多个空格。",
+    "repo": "evaluation/fixtures/missing_module",
+    "public_test_command": "python -m pytest tests -q",
+    "hidden_test_command": "python -m pytest hidden_tests/case_02_collapse_spaces.py -q",
+    "hidden_test_source": "evaluation/hidden_tests/missing_module",
+    "expected_files": [
+      "helpers.py"
+    ],
+    "forbidden_files": [
+      "tests/test_app.py"
+    ]
+  },
+  {
+    "id": "missing-module-003",
+    "issue": "修复 helpers.py：制表符也需要被规范化。",
+    "repo": "evaluation/fixtures/missing_module",
+    "public_test_command": "python -m pytest tests -q",
+    "hidden_test_command": "python -m pytest hidden_tests/case_03_tabs.py -q",
+    "hidden_test_source": "evaluation/hidden_tests/missing_module",
+    "expected_files": [
+      "helpers.py"
+    ],
+    "forbidden_files": [
+      "tests/test_app.py"
+    ]
+  },
+  {
+    "id": "missing-module-004",
+    "issue": "修复 helpers.py：换行和空白混合时应保持一个空格。",
+    "repo": "evaluation/fixtures/missing_module",
+    "public_test_command": "python -m pytest tests -q",
+    "hidden_test_command": "python -m pytest hidden_tests/case_04_newlines.py -q",
+    "hidden_test_source": "evaluation/hidden_tests/missing_module",
+    "expected_files": [
+      "helpers.py"
+    ],
+    "forbidden_files": [
+      "tests/test_app.py"
+    ]
+  },
+  {
+    "id": "missing-module-005",
+    "issue": "修复 helpers.py：空字符串应保持为空字符串。",
+    "repo": "evaluation/fixtures/missing_module",
+    "public_test_command": "python -m pytest tests -q",
+    "hidden_test_command": "python -m pytest hidden_tests/case_05_empty.py -q",
+    "hidden_test_source": "evaluation/hidden_tests/missing_module",
+    "expected_files": [
+      "helpers.py"
+    ],
+    "forbidden_files": [
+      "tests/test_app.py"
+    ]
+  },
+  {
+    "id": "missing-module-006",
+    "issue": "修复 helpers.py：多余内部空白需要折叠。",
+    "repo": "evaluation/fixtures/missing_module",
+    "public_test_command": "python -m pytest tests -q",
+    "hidden_test_command": "python -m pytest hidden_tests/case_06_multiple_internal_spaces.py -q",
+    "hidden_test_source": "evaluation/hidden_tests/missing_module",
+    "expected_files": [
+      "helpers.py"
+    ],
+    "forbidden_files": [
+      "tests/test_app.py"
+    ]
+  },
+  {
+    "id": "missing-module-007",
+    "issue": "修复 helpers.py：混合空白输入要输出单个空格。",
+    "repo": "evaluation/fixtures/missing_module",
+    "public_test_command": "python -m pytest tests -q",
+    "hidden_test_command": "python -m pytest hidden_tests/case_07_mixed_whitespace.py -q",
+    "hidden_test_source": "evaluation/hidden_tests/missing_module",
+    "expected_files": [
+      "helpers.py"
+    ],
+    "forbidden_files": [
+      "tests/test_app.py"
+    ]
+  },
+  {
+    "id": "missing-module-008",
+    "issue": "修复 helpers.py：单个名字不应被修改。",
+    "repo": "evaluation/fixtures/missing_module",
+    "public_test_command": "python -m pytest tests -q",
+    "hidden_test_command": "python -m pytest hidden_tests/case_08_single_word.py -q",
+    "hidden_test_source": "evaluation/hidden_tests/missing_module",
+    "expected_files": [
+      "helpers.py"
+    ],
+    "forbidden_files": [
+      "tests/test_app.py"
+    ]
+  },
+  {
+    "id": "word-count-001",
+    "issue": "修复 word_count.py：count_words 需要处理单个空格。",
+    "repo": "evaluation/fixtures/word_count",
+    "public_test_command": "python -m pytest tests -q",
+    "hidden_test_command": "python -m pytest hidden_tests/case_01_single_spaces.py -q",
+    "hidden_test_source": "evaluation/hidden_tests/word_count",
+    "expected_files": [
+      "word_count.py"
+    ],
+    "forbidden_files": [
+      "tests/test_word_count.py"
+    ]
+  },
+  {
+    "id": "word-count-002",
+    "issue": "修复 word_count.py：count_words 需要处理重复空格。",
+    "repo": "evaluation/fixtures/word_count",
+    "public_test_command": "python -m pytest tests -q",
+    "hidden_test_command": "python -m pytest hidden_tests/case_02_repeated_spaces.py -q",
+    "hidden_test_source": "evaluation/hidden_tests/word_count",
+    "expected_files": [
+      "word_count.py"
+    ],
+    "forbidden_files": [
+      "tests/test_word_count.py"
+    ]
+  },
+  {
+    "id": "word-count-003",
+    "issue": "修复 word_count.py：空字符串应该返回 0。",
+    "repo": "evaluation/fixtures/word_count",
+    "public_test_command": "python -m pytest tests -q",
+    "hidden_test_command": "python -m pytest hidden_tests/case_03_empty.py -q",
+    "hidden_test_source": "evaluation/hidden_tests/word_count",
+    "expected_files": [
+      "word_count.py"
+    ],
+    "forbidden_files": [
+      "tests/test_word_count.py"
+    ]
+  },
+  {
+    "id": "word-count-004",
+    "issue": "修复 word_count.py：换行和制表符应该被正确计数。",
+    "repo": "evaluation/fixtures/word_count",
+    "public_test_command": "python -m pytest tests -q",
+    "hidden_test_command": "python -m pytest hidden_tests/case_04_newlines_tabs.py -q",
+    "hidden_test_source": "evaluation/hidden_tests/word_count",
+    "expected_files": [
+      "word_count.py"
+    ],
+    "forbidden_files": [
+      "tests/test_word_count.py"
+    ]
+  },
+  {
+    "id": "word-count-005",
+    "issue": "修复 word_count.py：首尾空白不应影响词数。",
+    "repo": "evaluation/fixtures/word_count",
+    "public_test_command": "python -m pytest tests -q",
+    "hidden_test_command": "python -m pytest hidden_tests/case_05_leading_trailing.py -q",
+    "hidden_test_source": "evaluation/hidden_tests/word_count",
+    "expected_files": [
+      "word_count.py"
+    ],
+    "forbidden_files": [
+      "tests/test_word_count.py"
+    ]
+  },
+  {
+    "id": "word-count-006",
+    "issue": "修复 word_count.py：混合空白输入需要正确计数。",
+    "repo": "evaluation/fixtures/word_count",
+    "public_test_command": "python -m pytest tests -q",
+    "hidden_test_command": "python -m pytest hidden_tests/case_06_mixed_whitespace.py -q",
+    "hidden_test_source": "evaluation/hidden_tests/word_count",
+    "expected_files": [
+      "word_count.py"
+    ],
+    "forbidden_files": [
+      "tests/test_word_count.py"
+    ]
+  },
+  {
+    "id": "word-count-007",
+    "issue": "修复 word_count.py：单个单词应该返回 1。",
+    "repo": "evaluation/fixtures/word_count",
+    "public_test_command": "python -m pytest tests -q",
+    "hidden_test_command": "python -m pytest hidden_tests/case_07_single_word.py -q",
+    "hidden_test_source": "evaluation/hidden_tests/word_count",
+    "expected_files": [
+      "word_count.py"
+    ],
+    "forbidden_files": [
+      "tests/test_word_count.py"
+    ]
+  },
+  {
+    "id": "word-count-008",
+    "issue": "修复 word_count.py：多个空行之间的词也要被统计。",
+    "repo": "evaluation/fixtures/word_count",
+    "public_test_command": "python -m pytest tests -q",
+    "hidden_test_command": "python -m pytest hidden_tests/case_08_newline_separated.py -q",
+    "hidden_test_source": "evaluation/hidden_tests/word_count",
+    "expected_files": [
+      "word_count.py"
+    ],
+    "forbidden_files": [
+      "tests/test_word_count.py"
+    ]
+  }
+]
