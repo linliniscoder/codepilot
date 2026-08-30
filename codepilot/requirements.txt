@@ -1,0 +1,12 @@
+openai
+pydantic
+pyyaml
+rich
+numpy
+torch
+transformers
+sentence-transformers
+faiss-cpu
+tree-sitter
+tree-sitter-python
+pytest

@@ -1,0 +1,52 @@
+[
+  {
+    "id": "math-average-001",
+    "issue": "修复 calculator.py：add 应该执行加法；average 在传入空列表时应该返回 0。",
+    "repo": "evaluation/fixtures/math_average",
+    "public_test_command": "python -m pytest tests -q",
+    "hidden_test_command": "python -m pytest hidden_tests -q",
+    "hidden_test_source": "evaluation/hidden_tests/math_average",
+    "expected_files": ["calculator.py"],
+    "forbidden_files": ["tests/test_calculator.py"]
+  },
+  {
+    "id": "text-slugify-001",
+    "issue": "修复 text_utils.py 的 slugify：结果不能有首尾短横线，并且输入只有标点时应返回空字符串。",
+    "repo": "evaluation/fixtures/text_slugify",
+    "public_test_command": "python -m pytest tests -q",
+    "hidden_test_command": "python -m pytest hidden_tests -q",
+    "hidden_test_source": "evaluation/hidden_tests/text_slugify",
+    "expected_files": ["text_utils.py"],
+    "forbidden_files": ["tests/test_text_utils.py"]
+  },
+  {
+    "id": "order-total-001",
+    "issue": "修复 order.py：discount_percent 以百分数表示，例如 20 代表 20%，计算折后价格。",
+    "repo": "evaluation/fixtures/order_total",
+    "public_test_command": "python -m pytest tests -q",
+    "hidden_test_command": "python -m pytest hidden_tests -q",
+    "hidden_test_source": "evaluation/hidden_tests/order_total",
+    "expected_files": ["order.py"],
+    "forbidden_files": ["tests/test_order.py"]
+  },
+  {
+    "id": "missing-module-001",
+    "issue": "修复 helpers.py 的 normalize_name：除了去除首尾空格，还要把连续的内部空白规范为一个空格。",
+    "repo": "evaluation/fixtures/missing_module",
+    "public_test_command": "python -m pytest tests -q",
+    "hidden_test_command": "python -m pytest hidden_tests -q",
+    "hidden_test_source": "evaluation/hidden_tests/missing_module",
+    "expected_files": ["helpers.py"],
+    "forbidden_files": ["tests/test_app.py"]
+  },
+  {
+    "id": "word-count-001",
+    "issue": "修复 word_count.py：count_words 要正确处理空字符串、多个空格、换行和制表符。",
+    "repo": "evaluation/fixtures/word_count",
+    "public_test_command": "python -m pytest tests -q",
+    "hidden_test_command": "python -m pytest hidden_tests -q",
+    "hidden_test_source": "evaluation/hidden_tests/word_count",
+    "expected_files": ["word_count.py"],
+    "forbidden_files": ["tests/test_word_count.py"]
+  }
+]
